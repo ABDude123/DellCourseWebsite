@@ -13,8 +13,9 @@ function addToCart() {
     const selectedPackage = document.getElementById('price-package').value;
     const cartItems = document.getElementById('cart-items');
 
+    // Create cart item element with proper naming (Standard or Premium)
     const itemElement = document.createElement('div');
-    itemElement.textContent = `Added to cart: ${selectedPackage}`;
+    itemElement.textContent = `Added to cart: ${selectedPackage} Package`;
     itemElement.className = 'cart-item';
     cartItems.appendChild(itemElement);
 }
