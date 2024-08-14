@@ -1,3 +1,10 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -42,21 +49,23 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
-nav ul li button {
+nav ul li a {
+    padding: 10px 20px;
+    font-size: 1em;
     color: #fff;
-    background: none;
-    border: none;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    background: #ffd700;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li button:hover {
-    color: #ffd700;
+nav ul li a:hover {
+    background: #ffcc00;
+    transform: translateY(-3px);
 }
 
 section {
@@ -90,6 +99,8 @@ section h2 {
     background: #ffd700;
     border: none;
     border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -114,18 +125,6 @@ section h2 {
     cursor: pointer;
 }
 
-.checkout-button {
-    background: #fff;
-    color: #000;
-}
-
-#cart-items {
-    background: #333;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
 footer {
     background-color: #111;
     color: #ffd700;
@@ -136,21 +135,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-/* Animation for buttons */
-.cta-button, .checkout-button {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
